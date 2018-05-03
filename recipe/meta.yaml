@@ -1,20 +1,20 @@
 {% set name = "asciimatics" %}
-{% set version = "1.7.1" %}
-{% set sha256 = "25dc49119b95d1574f8fe47c6becae88243a7548432b38f363658d0c97e25ad7" %}
+{% set version = "1.9.0" %}
+{% set fn = "{}-{}-py2.py3-none-any.whl".format(name, version) %}
+{% set sha256 = "4fa4ab85f414228cf7986d2ffde68f53685c45125ac0fd889dfac8069fd4d339" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-   fn: {{ name }}-{{ version }}.tar.gz
-   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-   sha256: {{ sha256 }}
+  fn: {{ fn }}
+  url: https://pypi.io/packages/py2.py3/{{ name[0] }}/{{ name }}/{{ fn }}
+  sha256: {{ sha256 }}
 
 build:
   number: 0
-  skip: True  # [py36]
-  script: python -m pip install --no-deps --ignore-installed .
+  script: python -m pip install --no-deps --ignore-installed {{ fn }}
 
 requirements:
   build:
