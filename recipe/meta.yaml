@@ -1,7 +1,7 @@
 {% set name = "asciimatics" %}
-{% set version = "1.10.0" %}
+{% set version = "1.11.0" %}
 {% set fn = "{}-{}-py2.py3-none-any.whl".format(name, version) %}
-{% set sha256 = "ccfc28a04ae39fa6f73bbf8a45cef99476df3fefafb451f67598453921c1d4ce" %}
+{% set sha256 = "6c7ad130a0663ecb1b3a731b82c51d6662f1d2c4760de2b8ffc9c1faba775360" %}
 
 package:
   name: {{ name|lower }}
