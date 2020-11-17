@@ -1,5 +1,5 @@
 {% set name = "asciimatics" %}
-{% set version = "1.11.0" %}
+{% set version = "1.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1d0871133c95fa15c603d471ebb77e39b3389877e2ff2ad5ab3bc906d81b5e8c
+  sha256: 4120461a3fb345638dee4fe0f8a3d3f9b6d2d2e003f95c5f914523f94463158d
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools_scm
@@ -28,19 +28,19 @@ requirements:
 
 test:
   imports:
-    - asciimatics 
+    - asciimatics
 
 about:
   home: http://github.com/peterbrittain/asciimatics
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'Package to help people create full-screen text UIs'
+  summary: Package to help people create full-screen text UIs
 
   description: |
     Asciimatics is a package to help people create full-screen text UIs 
     (from interactive forms to ASCII animations) on any platform. 
-  doc_url: https://asciimatics.readthedocs.io/ 
+  doc_url: https://asciimatics.readthedocs.io/
   dev_url: http://github.com/peterbrittain/asciimatics
 
 extra:
