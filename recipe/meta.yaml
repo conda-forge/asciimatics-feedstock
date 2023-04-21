@@ -10,21 +10,22 @@ source:
   sha256: 16d20ce42210b434eb05ba469ecdb8293ac7ed3c0ce0dd4f70e30d72d7602227
 
 build:
-  number: 1
+  noarch: python
+  number: 2
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - pip
     - setuptools_scm
   run:
-    - python
+    - python >=3.8
     - wcwidth
     - pyfiglet >=0.7.2
     - pillow >=2.7.0
     - future
-    - pywin32  # [win]
+    - pywin32-on-windows
 
 test:
   imports:
@@ -38,8 +39,8 @@ about:
   summary: Package to help people create full-screen text UIs
 
   description: |
-    Asciimatics is a package to help people create full-screen text UIs 
-    (from interactive forms to ASCII animations) on any platform. 
+    Asciimatics is a package to help people create full-screen text UIs
+    (from interactive forms to ASCII animations) on any platform.
   doc_url: https://asciimatics.readthedocs.io/
   dev_url: http://github.com/peterbrittain/asciimatics
 
@@ -47,3 +48,4 @@ extra:
   recipe-maintainers:
     - CurtLH
     - sodre
+    - ryanvolz
