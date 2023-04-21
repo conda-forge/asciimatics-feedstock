@@ -152,5 +152,6 @@ Feedstock Maintainers
 =====================
 
 * [@CurtLH](https://github.com/CurtLH/)
+* [@ryanvolz](https://github.com/ryanvolz/)
 * [@sodre](https://github.com/sodre/)
 
