@@ -1,5 +1,5 @@
 {% set name = "asciimatics" %}
-{% set version = "1.14.0" %}
+{% set version = "1.15.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 16d20ce42210b434eb05ba469ecdb8293ac7ed3c0ce0dd4f70e30d72d7602227
+  sha256: cfdd398042727519d8b73e62b8ef82c0becfed4eb420899c3b96c98d0b96821a
 
 build:
   noarch: python
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - setuptools_scm
   run:
-    - python >=3.8
+    - python >=3.9
     - wcwidth
     - pyfiglet >=0.7.2
     - pillow >=2.7.0
